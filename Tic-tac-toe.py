@@ -25,9 +25,56 @@ def game():
             print("This place is already filled!!\nPlease choose a different place.")
             continue
 
+        if count>=5:
+            if board['7'] == board['8'] == board['9'] != ' ':
+                board_print(board)
+                print("\nGame Over.\n")
+                print(f"Hurray!! {turn} won.")
+                break
+            elif board['4'] == board['5'] == board['6'] != ' ':
+                board_print(board)
+                print("\nGame Over.\n")
+                print(f"Hurray!! {turn} won.")
+                break
+            elif board['1'] == board['2'] == board['3'] != ' ':
+                board_print(board)
+                print("\nGame Over.\n")
+                print(f"Hurray!! {turn} won.")
+                break
+            elif board['1'] == board['4'] == board['7'] != ' ':
+                board_print(board)
+                print("\nGame Over.\n")
+                print(f"Hurray!! {turn} won.")
+                break
+            elif board['2'] == board['5'] == board['8'] != ' ':
+                board_print(board)
+                print("\nGame Over.\n")
+                print(f"Hurray!! {turn} won.")
+                break
+            elif board['3'] == board['6'] == board['9'] != ' ':
+                board_print(board)
+                print("\nGame Over.\n")
+                print(f"Hurray!! {turn} won.")
+                break
+            elif board['7'] == board['5'] == board['3'] != ' ':
+                board_print(board)
+                print("\nGame Over.\n")
+                print(f"Hurray!! {turn} won.")
+                break
+            elif board['1'] == board['5'] == board['9'] != ' ':
+                board_print(board)
+                print("\nGame Over.\n")
+                print(f"Hurray!! {turn} won.")
+                break
+
+        if count==9:
+            print("\nGame Over.\n")
+            print("It\'s a tie!!!")
+
         if turn=="X":
             turn="O"
         else:
             turn="X"
+
 game()
 
