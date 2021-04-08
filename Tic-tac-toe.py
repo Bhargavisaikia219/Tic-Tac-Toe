@@ -13,7 +13,7 @@ def game():
     turn="X"
     count = 0
 
-    for i in range(9):
+    for i in range(10):
         board_print(board)
         print(f"\nNow it is your turn {turn}. Tell me which place you want to move.")
         move=input( )
@@ -75,6 +75,18 @@ def game():
             turn="O"
         else:
             turn="X"
+
+    board_keys = []
+
+    for key in board:
+        board_keys.append(key)
+
+    restart = input("Do want to play Again?(y/n)")
+    if restart == "y" or restart == "Y":
+        for key in board_keys:
+           board[key] = " "
+
+        game()
 
 game()
 
